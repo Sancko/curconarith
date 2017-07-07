@@ -22,27 +22,29 @@ Or install it yourself as:
 ## Usage
 
 # Configure the currency rates with respect to a base currency (here EUR):
-
+``` ruby
 Money.conversion_rates('EUR', {
   'USD'     => 1.11,
   'CAN'     => 2.22 } )
+``` 
   
 # Instantiate money objects:
-
+``` ruby
 money = Money.new(1000, "USD")
+``` 
 
 # Get amount and currency:
-
+``` ruby
 money.anount    #=> 1000
 money.currency  #=> "USD"
 money.inspect   # => "1000 EUR"
-
+``` 
 # Convert to a different currency
-
+``` ruby
 Money.new(1000, "EUR").convert_to('USD')   # => 1110 USD    #return Money object
-
-
+``` 
 # Comparisons (also in different currencies)
+``` ruby
 Money.new(1000, "USD") == Money.new(1000, "USD")   #=> true
 Money.new(1000, "USD") == Money.new(100,  "USD")   #=> false
 Money.new(1000, "USD") == Money.new(1000, "EUR")   #=> false
@@ -51,17 +53,17 @@ Money.new(1000, "USD") <= Money.new(1000, "USD")   #=> true
 Money.new(100,  "USD") >= Money.new(100,  "USD")   #=> true
 Money.new(1000, "USD") >  Money.new(1000, "EUR")   #=> false
 Money.new(0,    "EUR") == Money.new(0,    "EUR")   #=> true
-
+```
 
 # Arithmetic (perform operations in different currencies)
+``` ruby
 Money.new(1000, "EUR") + Money.new(222, "CAN") == Money.new(1100, "EUR")
 Money.new(1000, "USD") + Money.new(200, "CAN") == Money.new(1200, "USD")
 Money.new(1000, "EUR") - Money.new(111, "USD") == Money.new(900,  "EUR")
 Money.new(1000, "USD") - Money.new(150, "CAN") == Money.new(850,  "USD")
 Money.new(1000, "USD") / 5                     == Money.new(200,  "USD")
 Money.new(1000, "USD") * 5                     == Money.new(5000, "USD")
-
-
+```
 
 ## Development
 
