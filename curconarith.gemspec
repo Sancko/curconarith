@@ -9,9 +9,11 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Oleksandr Pohonets"]
   spec.email         = ["pohonets.oleksandr@gmail.com"]
 
-  spec.summary       = %q{Write a short summary, because Rubygems requires one}
-  spec.description   = %q{Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{It is the gem that alows you to convert money from one 
+                          currency to another and goes with bunch of arithmetic 
+                          actions that you can do with money.}
+  spec.description   = %q{Currency changer!}
+  spec.homepage      = "https://github.com/Sancko/curconarith"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
